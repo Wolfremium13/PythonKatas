@@ -2,6 +2,8 @@
 
 > All solutions maybe will be improved and refactored in the future.
 
+> [Commit guide style](https://gitmoji.dev/) 
+
 List of completed katas:
 
 * Narcissistic Number
