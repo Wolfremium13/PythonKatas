@@ -7,3 +7,4 @@
 List of completed katas:
 
 * Narcissistic Number
+* Multiples of 3 and 5
