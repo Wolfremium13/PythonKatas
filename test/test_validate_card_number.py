@@ -45,6 +45,7 @@ from src.validate_card_number import is_valid
 # ```
 # 18 (modulus) 10 ==> 8 , which is not equal to 0, so this is not a valid credit card number
 
+
 class TestCardNumber(TestCase):
 
     def test_is_valid_card_number_when_is_divisible_by_10(self):

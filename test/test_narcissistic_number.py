@@ -39,4 +39,3 @@ class TestIsNarcissisticNumber:
 
     def test_is_narcissistic_number_returns_true_given_narcissistic_one(self):
         assert_that(is_narcissistic(153)).is_true()
-
