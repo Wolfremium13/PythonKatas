@@ -16,8 +16,8 @@ lint:   ## Lint the project files
 	@echo "Check for errors with flake8"
 	@PIPENV_VERBOSITY=-1 pipenv run flake8 ./
 
-.PHONY: test
-test:  ## Locally run tests
-	@PYTHONPATH=src PIPENV_VERBOSITY=-1 pipenv run pytest -v test/
+.PHONY: tests
+tests:  ## Locally run tests
+	@PYTHONPATH=src PIPENV_VERBOSITY=-1 pipenv run pytest -v tests/
 
 
