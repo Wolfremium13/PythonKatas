@@ -1,4 +1,6 @@
 from assertpy import assert_that
+
+from src.incremental_string import increment_the_end_number_by_one
 # Your job is to write a function which increments a string,
 #  to create a new string.
 
@@ -21,10 +23,6 @@ from assertpy import assert_that
 # Attention: If the number has leading zeros the amount
 #  of digits should be considered.
 
-from re import A
-
-from src.incremental_string import increment_the_end_number_by_one
-
 
 class TestIncrementalString:
     def test_increments_without_number_at_the_end(self):
@@ -39,7 +37,7 @@ class TestIncrementalString:
 
     def test_increments_number_adding_one_digit_for_multiples_of_ten(self):
         assert_that(increment_the_end_number_by_one("foo9")).is_equal_to("foo10")
-    
+
     def test_increments_number_changing_previous_zero_for_multiples_of_ten(self):
         assert_that(increment_the_end_number_by_one("foo099")).is_equal_to("foo100")
 
