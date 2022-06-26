@@ -1,9 +1,18 @@
-from itertools import chain, product
+from itertools import product
 
-zero_to_nine_combinations = ('08', '124', '2135', '326', '4157', '52468', '6359', '748', '85790', '968')
 
-def get_pins(observed_number: str):
-    combinations_product = [product(*(zero_to_nine_combinations[int(d)])) for d in observed_number]
-    flat_combinations = list(chain(*combinations_product))
-    neighborhood_combinations = list(sum(flat_combinations, ()))
-    return neighborhood_combinations
+PIN = {
+    '1': ('1', '2', '4'),
+    '2': ('1', '2', '3', '5'),
+    '3': ('2', '3', '6'),
+    '4': ('1', '4', '5', '7'),
+    '5': ('2', '4', '5', '6', '8'),
+    '6': ('5', '6', '9', '3'),
+    '7': ('4', '7', '8'),
+    '8': ('7', '5', '8', '9', '0'),
+    '9': ('6', '8', '9'), '0': ('0', '8')
+}
+
+
+def get_pins(observed):
+    return [''.join(a) for a in product(*(PIN[digit] for digit in observed))]

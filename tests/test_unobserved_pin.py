@@ -48,7 +48,15 @@ class TestUnobservedPin:
         assert_that(get_pins('1')).is_equal_to(['1', '2', '4'])
         assert_that(get_pins('2')).is_equal_to(['2', '1', '3', '5'])
         assert_that(get_pins('3')).is_equal_to(['3', '2', '6'])
-        
+
     def test_returns_all_combinations_from_given_number(self):
-        assert_that(get_pins('1357')).is_equal_to(
-            ['1', '2', '4', '3', '2', '6', '5', '2', '4', '6', '8', '7', '4', '8'])
+        assert_that(get_pins('369')).is_equal_to(
+            [
+                '256', '258', '259', '266', '268', '269', '296',
+                '298', '299', '236', '238', '239', '356', '358',
+                '359', '366', '368', '369', '396', '398', '399',
+                '336', '338', '339', '656', '658', '659', '666',
+                '668', '669', '696', '698', '699', '636', '638',
+                '639'
+            ]
+        )
