@@ -1,6 +1,3 @@
-import re
-
-
 def increment_the_end_number_by_one(line: str) -> str:
     head = line.rstrip('0123456789')
     tail = line[len(head):]

@@ -17,8 +17,9 @@ from src.trailing_zeros import trailing_zeros
 # # 12! = 479001600 --> 2 trailing zeros
 # Hint: You're not meant to calculate the factorial. Find another way to find the number of zeros.
 
+
 class TestTrailingZeros:
-    
+
     def test_trailing_zeros_returns_the_number_of_zeros_at_the_final_of_the_number(self):
         assert_that(trailing_zeros(0)).is_equal_to(0)
         assert_that(trailing_zeros(6)).is_equal_to(1)
